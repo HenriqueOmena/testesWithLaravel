@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use phpDocumentor\Reflection\Types\Integer;
+use Faker\Factory as Faker;
+use App\Militante;
 
 class MilitanteSeeder extends Seeder
 {
@@ -12,14 +14,9 @@ class MilitanteSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('militante')->truncate();
+        //DB::table('militante')->truncate();
 
-        factory(\App\Militante::class, 5)->create()->each(function($Militante){
+        factory(Militante::class, 10)->create();
 
-        });
-        \App\Militante::create([
-            'nome' => 'Nome do Produto',
-            'num_regional' => 123456
-        ]);
     }
 }
