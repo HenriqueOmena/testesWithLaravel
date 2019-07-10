@@ -18,6 +18,10 @@ class CargoController extends Controller
         return view('cargo.index', compact('cargos'));
     }
 
+    public function getFields()
+    {
+
+    }
     /**
      * Show the form for creating a new resource.
      *

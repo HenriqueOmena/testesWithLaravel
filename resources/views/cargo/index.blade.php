@@ -3,7 +3,7 @@
 @section('title', 'About')
 
 @section('content')
-<h1>About</h1>
+<h1>Cargos</h1>
 <p>This is the application I'm building in the
   <a href="https://selftaughtcoders.com/from-idea-to-launch">
   From Idea To Launch</a> course.</p>
@@ -40,9 +40,7 @@
 
 
 @push('js')
-    <script>
-        flatpickr('#data_inicio', {});
-    </script>
+   <script src="/js/cargo/index.js"></script>
 @endpush
 
 @endsection
