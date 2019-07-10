@@ -12,7 +12,6 @@
   questions for various different
   programming languages.</p>
 
-
   <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
@@ -39,5 +38,11 @@
     </div>
 </div>
 
+
+@push('js')
+    <script>
+        flatpickr('#data_inicio', {});
+    </script>
+@endpush
 
 @endsection
