@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Cargo;
+use App\Cargo as Cargos;
 use Illuminate\Http\Request;
 
 class CargoController extends Controller
@@ -14,7 +14,8 @@ class CargoController extends Controller
      */
     public function index()
     {
-        //
+        $cargos = Cargos::all();
+        return view('cargo.index', compact('cargos'));
     }
 
     /**
