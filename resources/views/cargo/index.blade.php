@@ -28,6 +28,9 @@
             </button>
         </div>
         <div class="modal-body">
+            <div class="col-12 text-center mb-3">
+                <i class="material-icons plus" data-url="{{ action('CargoController@getFields') }}">add_circle_outline</i>
+            </div>
             @include('components.cargo.fieldCargo')
         </div>
         <div class="modal-footer">

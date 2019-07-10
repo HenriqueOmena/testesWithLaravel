@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cargo as Cargos;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Routing\ResponseFactory;
 
 class CargoController extends Controller
 {
@@ -20,6 +21,10 @@ class CargoController extends Controller
 
     public function getFields()
     {
+        $cargos = Cargos::all();
+
+        $html = view('components.cargo.fieldCargo', compact('cargos'));
+        return response()->json(array('success' => 'true', 'message' => $html->render()));
 
     }
     /**

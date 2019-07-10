@@ -24,6 +24,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/cargo', 'CargoController@index')->name('cargo');
+Route::get('/asd', 'CargoController@getFields')->name('fields');
 
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
