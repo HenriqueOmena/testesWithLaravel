@@ -13,4 +13,8 @@ class Militante extends Model
         return $this->belongsToMany('App\Orgao', 'militante_orgao', 'militante_id', 'orgao_id');
     }
 
+    public function cargoOrgao(){
+        return $this->hasManyDeep('App\Cargo', ['App\MilitanteOrgao', 'App\MilitanteOrgaoCargo']);
+    }
+
 }
